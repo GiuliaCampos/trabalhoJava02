@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class Filme{
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
+  private Long id_filme;
   @NotBlank 
   private String nome_filme;
   
@@ -23,7 +23,7 @@ public class Filme{
   private Long qtd_nao_gostei;
 
   public Long getId(){
-    return this.id;
+    return this.id_filme;
   }
   public String getNomeFilme(){
     return this.nome_filme;
@@ -44,7 +44,7 @@ public class Filme{
   }
 
   public void setId(Long id){
-    this.id=id;
+    this.id_filme=id;
   }
 
   public void setAnoLacamento(Long ano_lacamento){
