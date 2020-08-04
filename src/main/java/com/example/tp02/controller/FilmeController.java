@@ -1,10 +1,9 @@
 package com.example.tp02.controller;
 
+import com.example.tp02.model.Comentario;
+import com.example.tp02.service.comentarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.example.tp02.service.filmeService;
 import com.example.tp02.model.Filme;
 
@@ -16,18 +15,30 @@ public class FilmeController {
     @Autowired
     filmeService filmeService;
 
+
     @RequestMapping(value = "/filmes", method = RequestMethod.GET)
     public List<Filme> getFilmes() {
 
-        List<Filme> filmes = filmeService.findAll();
-
-        return filmes;
+        return filmeService.findAll();
     }
 
-    @RequestMapping(value = "/filme/{id_cliente}", method = RequestMethod.GET)
-    public Filme getFilme(@PathVariable Long id_cliente) {
-        Filme filme = filmeService.findById(id_cliente);
+    @RequestMapping(value = "/filme/{id_filme}", method = RequestMethod.GET)
+    public Filme getFilme(@PathVariable Long id_filme) {
+        Filme filme = filmeService.findById(id_filme);
         return filme;
     }
+    @RequestMapping(value = "/filme/gostei/{id_filme}", method = RequestMethod.PUT,  produces = "application/json")
+    public Filme updateNumeroGostei(@PathVariable Long id_filme){
+        Filme filme = filmeService.findById(id_filme);
+       try{
+           filme.setQtd_gostei();
+
+       }catch (Exception err){
+           System.out.println(err);
+       }
+        return filmeService.save(filme);
+    }
+
+
 
 }

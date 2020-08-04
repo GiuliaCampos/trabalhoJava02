@@ -16,15 +16,25 @@ public class Comentario {
     private Date dataAtualizou = new Date();
 
     private Date dataCadastrou = new Date();
-    @NotNull
-    private Long id_filme;
+    private int nota;
 
-    public Long getId_filme() {
-        return id_filme;
+    public int getNota() {
+        return nota;
     }
 
-    public void setId_filme(Long id_filme) {
-        this.id_filme = id_filme;
+    public void setNota(int nota) {
+        this.nota = nota;
+    }
+
+    @ManyToOne
+    Filme filme;
+
+    public Filme getFilme() {
+        return filme;
+    }
+
+    public void setFilme(Filme filme) {
+        this.filme = filme;
     }
 
     public Long getId_comentario() {

@@ -3,7 +3,7 @@ package com.example.tp02.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
+import java.util.List;
 @Entity
 @Table(name="Filme")
 public class Filme{
@@ -14,7 +14,7 @@ public class Filme{
   private String nome_filme;
   
   @NotNull
-  private Long ano_lacamento;
+  private Long ano_lancamento;
   @NotBlank
   private String capa_filme;
   @NotNull
@@ -22,47 +22,51 @@ public class Filme{
   @NotNull
   private Long qtd_nao_gostei;
 
-  public Long getId(){
-    return this.id_filme;
-  }
-  public String getNomeFilme(){
-    return this.nome_filme;
-  }
-  public Long getAnoLancamento(){
-    return this.ano_lacamento;
+  public Long getId_filme() {
+    return id_filme;
   }
 
-  public String getCapaFilme(){
-    return this.capa_filme;
+  public void setId_filme(Long id_filme) {
+    this.id_filme = id_filme;
   }
 
-  public Long getQtdGostei(){
-    return this.qtd_gostei;
-  }
-  public Long getQtdNaoGostei(){
-    return this.qtd_nao_gostei;
+  public String getNome_filme() {
+    return nome_filme;
   }
 
-  public void setId(Long id){
-    this.id_filme=id;
+  public void setNome_filme(String nome_filme) {
+    this.nome_filme = nome_filme;
   }
 
-  public void setAnoLacamento(Long ano_lacamento){
-    this.ano_lacamento=ano_lacamento;
+  public Long getAno_lacamento() {
+    return ano_lancamento;
   }
 
-  public void setNomeFilme(String nome_filme){
-    this.nome_filme=nome_filme;
+  public void setAno_lacamento(Long ano_lacamento) {
+    this.ano_lancamento = ano_lacamento;
   }
 
-  public void setCapaFilme(String capa_filme){
+  public String getCapa_filme() {
+    return capa_filme;
+  }
+
+  public void setCapa_filme(String capa_filme) {
     this.capa_filme = capa_filme;
   }
 
-  public void setQtdGostei(){
+  public Long getQtd_gostei() {
+    return qtd_gostei;
+  }
+
+  public void setQtd_gostei() {
     this.qtd_gostei += 1;
   }
-  public void setQtdNaoGostei(){
+
+  public Long getQtd_nao_gostei() {
+    return qtd_nao_gostei;
+  }
+
+  public void setQtd_nao_gostei() {
     this.qtd_nao_gostei += 1;
   }
 

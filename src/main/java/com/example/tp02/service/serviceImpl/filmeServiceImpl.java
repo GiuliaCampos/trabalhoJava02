@@ -23,4 +23,9 @@
    public Filme findById(long id) {
      return filmeRepository.findById(id).get();
    }
- }
+
+  @Override
+  public Filme save(Filme filme) {
+    return filmeRepository.save(filme);
+  }
+}

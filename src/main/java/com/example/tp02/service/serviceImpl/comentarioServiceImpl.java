@@ -1,6 +1,7 @@
 package com.example.tp02.service.serviceImpl;
 
 import com.example.tp02.model.Comentario;
+import com.example.tp02.model.Filme;
 import com.example.tp02.repository.ComentarioRepository;
 import com.example.tp02.service.comentarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,10 @@ public class comentarioServiceImpl implements comentarioService {
     @Override
     public Comentario save(Comentario comentario) {
         return comentarioRepository.save(comentario);
+    }
+
+    @Override
+    public List<Comentario> findComentarioByFilme(Filme filme) {
+        return comentarioRepository.findComentarioByFilme(filme);
     }
 }
