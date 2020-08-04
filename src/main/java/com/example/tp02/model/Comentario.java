@@ -16,7 +16,10 @@ public class Comentario {
     private Date dataAtualizou = new Date();
 
     private Date dataCadastrou = new Date();
-    private int nota;
+    private int nota = 0;
+
+    @ManyToOne
+    Filme filme;
 
     public int getNota() {
         return nota;
@@ -25,10 +28,6 @@ public class Comentario {
     public void setNota(int nota) {
         this.nota = nota;
     }
-
-    @ManyToOne
-    Filme filme;
-
     public Filme getFilme() {
         return filme;
     }

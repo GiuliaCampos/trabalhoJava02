@@ -16,11 +16,11 @@ public class Filme{
   @NotNull
   private Long ano_lancamento;
   @NotBlank
-  private String capa_filme;
+  private String capa_filme=" ";
   @NotNull
-  private Long qtd_gostei;
+  private int qtd_gostei =  0;
   @NotNull
-  private Long qtd_nao_gostei;
+  private int qtd_nao_gostei = 0;
 
   public Long getId_filme() {
     return id_filme;
@@ -54,7 +54,7 @@ public class Filme{
     this.capa_filme = capa_filme;
   }
 
-  public Long getQtd_gostei() {
+  public int getQtd_gostei() {
     return qtd_gostei;
   }
 
@@ -62,7 +62,7 @@ public class Filme{
     this.qtd_gostei += 1;
   }
 
-  public Long getQtd_nao_gostei() {
+  public int getQtd_nao_gostei() {
     return qtd_nao_gostei;
   }
 

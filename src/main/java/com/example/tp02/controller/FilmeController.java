@@ -30,12 +30,7 @@ public class FilmeController {
     @RequestMapping(value = "/filme/gostei/{id_filme}", method = RequestMethod.PUT,  produces = "application/json")
     public Filme updateNumeroGostei(@PathVariable Long id_filme){
         Filme filme = filmeService.findById(id_filme);
-       try{
-           filme.setQtd_gostei();
-
-       }catch (Exception err){
-           System.out.println(err);
-       }
+        filme.setQtd_gostei();
         return filmeService.save(filme);
     }
 
