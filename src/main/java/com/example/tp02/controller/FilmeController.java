@@ -1,7 +1,6 @@
 package com.example.tp02.controller;
 
-import com.example.tp02.model.Comentario;
-import com.example.tp02.service.comentarioService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.tp02.service.filmeService;
