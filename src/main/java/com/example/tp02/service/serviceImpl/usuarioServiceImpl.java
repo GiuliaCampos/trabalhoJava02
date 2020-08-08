@@ -21,8 +21,9 @@ public class usuarioServiceImpl implements usuarioService {
     }
 
     @Override
-    public Usuario findUsuario(String email) {
-        return usuarioRepository.findUsuario(email);
+    public Usuario findByEmail(String email) {
+        return findByEmail(email);
     }
+
 
 }
