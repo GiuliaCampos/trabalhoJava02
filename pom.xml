@@ -15,7 +15,7 @@
 	<description>Trabalho Prático 2 - Java</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>13</java.version>
 	</properties>
 
 	<dependencies>
@@ -71,8 +71,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>13</source>
+					<target>13</target>
 				</configuration>
 			</plugin>
 		</plugins>
