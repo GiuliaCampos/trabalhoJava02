@@ -15,7 +15,7 @@
 	<description>Trabalho Prático 2 - Java</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>11.0.8</java.version>
 	</properties>
 
 	<dependencies>
