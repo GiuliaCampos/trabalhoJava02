@@ -21,7 +21,7 @@ public class FilmesController {
     @GetMapping
     @ApiOperation(value = "Retorna a lista de filmes")
     public ResponseEntity<List<Filmes>> index(){
-
+        System.out.println("Aqui");
         return ResponseEntity.ok().body(filmesRepository.findAll());
     }
     @GetMapping("/{id_filme}")
