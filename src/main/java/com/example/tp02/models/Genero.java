@@ -15,6 +15,7 @@ public class Genero implements Serializable {
     private long id_genero;
     private String nome_genero;
 
+
     public long getId_genero() {
         return id_genero;
     }
