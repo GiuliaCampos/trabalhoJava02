@@ -27,7 +27,7 @@ public class Filmes implements Serializable {
     @Value("${my.int.config: #{0}}")
     private String capa_filme;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name="id_genero")
     private List<Genero> genero = new ArrayList<>();;
 
