@@ -24,6 +24,9 @@ public class Comentarios implements Serializable{
     @ManyToOne
     private Filmes filme;
 
+    @NotBlank
+    private String nome_usuario;
+
     @NotNull
     @NotBlank
     private String nome_quem_comentou;
@@ -74,5 +77,13 @@ public class Comentarios implements Serializable{
 
     public void setNome_quem_comentou(String nome_quem_comentou) {
         this.nome_quem_comentou = nome_quem_comentou;
+    }
+
+    public String getNome_usuario() {
+        return nome_usuario;
+    }
+
+    public void setNome_usuario(String nome_usuario) {
+        this.nome_usuario = nome_usuario;
     }
 }
