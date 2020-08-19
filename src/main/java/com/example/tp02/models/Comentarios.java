@@ -25,11 +25,10 @@ public class Comentarios implements Serializable{
     private Filmes filme;
 
     @NotBlank
+    @NotNull
     private String nome_usuario;
 
-    @NotNull
-    @NotBlank
-    private String nome_quem_comentou;
+
 
     public long getId_comentario() {
         return id_comentario;
@@ -69,14 +68,6 @@ public class Comentarios implements Serializable{
 
     public void setFilme(Filmes filme) {
         this.filme = filme;
-    }
-
-    public String getNome_quem_comentou() {
-        return nome_quem_comentou;
-    }
-
-    public void setNome_quem_comentou(String nome_quem_comentou) {
-        this.nome_quem_comentou = nome_quem_comentou;
     }
 
     public String getNome_usuario() {
