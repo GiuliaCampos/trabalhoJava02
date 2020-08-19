@@ -3,6 +3,7 @@ package com.example.tp02.models;
 import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -26,6 +27,10 @@ public class Filmes implements Serializable {
     private long qtd_nao_gostei;
     @Value("${my.int.config: #{0}}")
     private String capa_filme;
+
+    @NotBlank
+    @NotNull
+    private String sinopse;
 
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Genero> genero = new ArrayList<>();;
@@ -85,5 +90,13 @@ public class Filmes implements Serializable {
 
     public void setCapa_filme(String capa_filme) {
         this.capa_filme = capa_filme;
+    }
+
+    public String getSinopse() {
+        return sinopse;
+    }
+
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
     }
 }

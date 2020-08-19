@@ -28,8 +28,6 @@ public class Comentarios implements Serializable{
     @NotNull
     private String nome_usuario;
 
-
-
     public long getId_comentario() {
         return id_comentario;
     }
@@ -77,4 +75,6 @@ public class Comentarios implements Serializable{
     public void setNome_usuario(String nome_usuario) {
         this.nome_usuario = nome_usuario;
     }
+
+
 }
