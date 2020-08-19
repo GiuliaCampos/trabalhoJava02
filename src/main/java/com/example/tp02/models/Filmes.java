@@ -29,7 +29,6 @@ public class Filmes implements Serializable {
     private String capa_filme;
 
     @NotBlank
-    @NotNull
     private String sinopse;
 
     @ManyToMany(cascade = CascadeType.ALL)
