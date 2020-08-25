@@ -24,9 +24,19 @@ public class Comentarios implements Serializable{
     @ManyToOne
     private Filmes filme;
 
-    @NotBlank
     @NotNull
-    private String nome_usuario;
+    @ManyToOne
+    private Usuario usuario;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+
 
     public long getId_comentario() {
         return id_comentario;
@@ -68,13 +78,6 @@ public class Comentarios implements Serializable{
         this.filme = filme;
     }
 
-    public String getNome_usuario() {
-        return nome_usuario;
-    }
-
-    public void setNome_usuario(String nome_usuario) {
-        this.nome_usuario = nome_usuario;
-    }
 
 
 }
