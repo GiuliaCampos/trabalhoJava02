@@ -27,7 +27,6 @@ public class ComentariosControllers {
     @GetMapping(value = "/filmes/{id_filme}", produces = "application/json")
     @ApiOperation(value = "Todos o comentarios de um filme")
     public List<Comentarios> index(@PathVariable long id_filme){
-
         Filmes filme = filmesRepository.findById(id_filme);
 
         return comentariosRepository.findComentariosByFilme(filme);
