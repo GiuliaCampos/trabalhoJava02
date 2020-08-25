@@ -8,7 +8,7 @@ Trabalho desenvolvido para a disciplina de Tecnologias Java - Grupo : Luiz Guilh
 A documentação da Api e as relações entre as entidades do trabalho podem ser vistas nesse [link.](https://blogfilme.herokuapp.com/swagger-ui.html)
 
 </div>
-# Ferramentas utilizadas<h1>
+Ferramentas utilizadas
 <div style="text-align: justified">
   <ul>
     <li>Banco de dados postgres</li>
