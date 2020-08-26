@@ -7,6 +7,8 @@ Trabalho desenvolvido para a disciplina de Tecnologias Java - Grupo : Luiz Guilh
 
 A documentação da Api e as relações entre as entidades do trabalho podem ser vistas nesse [link.](https://blogfilme.herokuapp.com/swagger-ui.html)
 
+O link do front para testes pode pode ser acessado nesse [link](https://weslley543.github.io/tp02JavaFront)
+
 </div>
 Ferramentas utilizadas
 <div style="text-align: justified">
